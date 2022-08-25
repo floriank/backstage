@@ -18,6 +18,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import React, { useEffect, useState } from 'react';
 import SwaggerUI from 'swagger-ui-react';
 import 'swagger-ui-react/swagger-ui.css';
+import 'openapi-explorer';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -149,7 +150,8 @@ export const OpenApiDefinition = ({ definition }: OpenApiDefinitionProps) => {
 
   return (
     <div className={classes.root}>
-      <SwaggerUI spec={def} url="" deepLinking />
+      {/* <SwaggerUI spec={def} url="" deepLinking />*/}
+      <openapi-explorer spec-url={def} />
     </div>
   );
 };

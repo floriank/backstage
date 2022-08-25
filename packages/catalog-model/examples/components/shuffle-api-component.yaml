@@ -10,3 +10,5 @@ spec:
   lifecycle: production
   owner: user:guest
   system: audio-playback
+  providesApis:
+    - spotify
